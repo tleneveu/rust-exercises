@@ -14,10 +14,14 @@ fn main() {
             Err(_) => continue,
         };
 
-        let celsius = (temperature - 32) * 5 / 9;
+        let celsius = fahrenheit_to_celsius(temperature);
 
         println!("{} degree Fahrenheit is equal to {} degree Celsius", temperature, celsius);
 
         break;
     }
+}
+
+fn fahrenheit_to_celsius(temperature: i32) -> i32 {
+    (temperature - 32) * 5 / 9
 }
